@@ -1,89 +1,91 @@
-import fetchRockets from "./Api";
+import FetchRocketsData from '../API/rocketAPI';
 
-const ROCKETS_REQUEST = 'space-travellers/rockets/GET_REQUEST';
-const ROCKETS_SUCCESS = 'space-travellers/rockets/GET_SUCESS';
-const ROCKETS_FAIL = 'space-travellers/rockets/GET_FAIL';
+const GET_ROCKETS_REQUEST = 'space-travellers/rockets/GET_REQUEST';
+const GET_ROCKETS_SUCCESS = 'space-travellers/rockets/GET_SUCESS';
+const GET_ROCKETS_FAIL = 'space-travellers/rockets/GET_FAIL';
 const RESERVE_ROCKET = 'space-travellers/rockets/RESERVE_ROCKET';
 
-const initialState ={
-    rocketsData:[],
-    error: '',
-    load:false,
+const initialState = {
+  rocketsData: [],
+  error: '',
+  load: false,
 };
 
-const rocketRequest = () =>({
-    type:ROCKETS_FAIL,
-})
+const getRocketRequest = () => ({
+  type: GET_ROCKETS_REQUEST,
+});
 
-const rocketSuccess =()=>({
-    type: ROCKETS_SUCCESS,
-    payload:data,
-})
+const getRocketSuccess = (rocketsData) => ({
+  type: GET_ROCKETS_SUCCESS,
+  payload: rocketsData,
+});
 
-const rocketFail = () =>({
-    type:ROCKETS_FAIL,
-    payload:error,
-})
+const getRocketFail = (error) => ({
+  type: GET_ROCKETS_FAIL,
+  payload: error,
+});
 
-const getRockets = () =>{
-    return (dispatch) => {
-        dispatch(rocketRequest());
-        fetchRockets()
-        .then((data)=>{
-            const rocketInfo = data.map((rocket)=>({
-                id:rocket.id,
-                name: rocket.name,
-                desc:rocket.description,
-                image:rocket.flickr_images[0],
-                wukipedia:rocket.wikipedia,
-                reserved: false,
-            }))
-            dispatch(rocketSuccess(rocketInfo))
-        })
-        .catch((error) =>{
-            dispatch(rocketFail(error.message))
-        })
-    }
+export function getRockets() {
+  return (dispatch) => {
+    dispatch(getRocketRequest());
+    FetchRocketsData()
+      .then((data) => {
+        const rocketinfo = data.map((uniData) => ({
+          id: uniData.id,
+          name: uniData.name,
+          desc: uniData.description,
+          image: uniData.flickr_images[0],
+          wikipedia: uniData.wikipedia,
+          reserved: false,
+        }));
+        dispatch(getRocketSuccess(rocketinfo));
+      })
+      .catch((error) => {
+        dispatch(getRocketFail(error.message));
+      });
+  };
 }
 
-const reserveRocket =(id) =>({
-    type:RESERVE_ROCKET,
-    payload:id,
-})
+const
+  reserveRocket = (id) => ({
+    type: RESERVE_ROCKET,
+    payload: id,
+  });
 
-const rocketReducer=(state = initialState,action) =>{
-    switch(action.type){
-        case ROCKETS_REQUEST:
-            return {...state, load: true};
-        case ROCKETS_SUCCESS:
-            return{
-                ...state,
-                data:action.payload,
-                error:"",
-            };
-        case ROCKETS_FAIL:
-            return{
-                ...state,
-                load:false,
-                error:action.payload,
-            };
-        case RESERVE_ROCKET:
-            return{
-                data:state.data.map((rocket) =>{
-                    if (rocket.id === action.payload){
-                        return {...rocket, reserved: !rocket.reserved};
-                    }
-                    return rocket;
-                })
-            }
-            default:
-                return state;
-    }
+export default function rocketReducer(state = initialState, action) {
+  switch (action.type) {
+    case GET_ROCKETS_REQUEST:
+      return { ...state, load: true };
+    case GET_ROCKETS_SUCCESS:
+      return {
+        ...state,
+        rocketsData: action.payload,
+        error: '',
+      };
+    case GET_ROCKETS_FAIL:
+      return {
+        ...state,
+        load: false,
+        error: action.payload,
+      };
+    case RESERVE_ROCKET:
+      return {
+        ...state,
+        rocketsData: state.rocketsData.map((rocket) => {
+          if (rocket.id === action.payload) {
+            return { ...rocket, reserved: !rocket.reserved };
+          }
+          return rocket;
+        }),
+      };
+    default:
+      return state;
+  }
 }
 
 export {
-   rocketFail,
-   rocketSuccess,
-   rocketRequest,
-   reserveRocket 
-}
+  getRocketFail,
+  getRocketSuccess,
+  getRocketRequest,
+  reserveRocket,
+};
