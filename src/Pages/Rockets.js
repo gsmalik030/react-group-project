@@ -11,7 +11,7 @@ const Rockets = () => {
     },[]);
     const newRockets = rockets.data;
     const cards = newRockets.length > 0 && newRockets.map((rocket) => (
-      <RocketCard
+      <Rocket
         key={rocket.id}
         id={rocket.id}
         name={rocket.name}
