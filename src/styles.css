@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: black;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.logo img {
+  width: 3em;
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-weight: 500;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #3193ee;
+  margin-right: 1em;
+}
+
+.navbar span {
+  margin-right: 1em;
+  color: #3193ee;
+}
+
+.line {
+  border: 1px solid gainsboro;
+  margin: 1em 1.5em;
+}
+
+table,
+th,
+td {
+  border: solid 1px #d1d1d1;
+  border-collapse: collapse;
+}
+
+table {
+  margin: 20px 80px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: start;
+}
+
+.mission-name {
+  vertical-align: top;
+  width: 15%;
+  font-weight: bold;
+}
+
+.member-status-cell {
+  width: 15%;
+  text-align: center;
+}
+
+.member-status-cell span {
+  color: #fff;
+  background-color: #808080;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.member-status-cell span.active-badge {
+  background-color: #25b1bb;
+}
+
+.status-btn-cell {
+  width: 15%;
+  text-align: center;
+}
+
+.status-btn-cell button {
+  color: #808080;
+  background-color: #fff;
+  padding: 10px;
+  border: solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.status-btn-cell button.danger-btn {
+  color: #f00;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 2em 0 1em 2em;
+}
+
+.rocket img {
+  width: 20em;
+  height: 20em;
+  border-radius: 0.5em;
+}
+
+.rocket-desc {
+  margin-top: -1em;
+  margin-left: 1em;
+  width: 70%;
+}
+
+.reserved-badge {
+  margin-right: 0.5em;
+  color: white;
+  background-color: rgb(72, 196, 196);
+  border: none;
+  border-radius: 0.3em;
+  padding: 0 0.3em;
+}
+
+.reserve {
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.7em;
+  background-color: #3193ee;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.cancel {
+  border: 1px solid gray;
+  border-radius: 0.3em;
+  padding: 0.7em;
+  background-color: white;
+  color: gray;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.Profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 5em;
+}
+
+.my-missions,
+.my-rockets {
+  border: 1px solid gainsboro;
+  margin-left: 2.5em;
+}
+
+.missions-profile,
+.rockets-profile {
+  margin: 1em 0 0 1.2em;
+  font-weight: 500;
+}
+
+.missions-profile h2,
+.rockets-profile h2 {
+  margin: 1em 0 0 1.2em;
+  font-weight: 500;
+}
+
+.missions-profile ul,
+.my-rockets ul {
+  list-style: none;
+  margin: 0;
+}
+
+.missions-profile li,
+.my-rockets li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30em;
+  padding: 0.7em;
+  margin-left: -2.5em;
+}
+
+.my-rockets a,
+.my-missions a {
+  text-decoration: none;
+  border-radius: 0.3em;
+  padding: 0.2em;
+  background-color: #3193ee;
+  color: white;
+}

@@ -1,10 +1,10 @@
 import { Outlet, Link } from 'react-router-dom';
-
+import logo from '../images/logo.png';
 const Navbar = () => (
   <>
     <nav className="navbar">
       <div className="logo">
-        <img src="../logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
         <h1>Space Travelers Hub</h1>
       </div>
       <ul>
