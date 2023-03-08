@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../redux/rockets/rockets';
-const Rocket = ({id, name, image, reserved, desc}) => {
-    const dispatch =useDispatch();
-    const handleReservation = (id) => (dispatch(reserveRocket(id)))
+import { reserveRocket } from '../../redux/rockets/rockets';
+
+const RocketCard = ({
+  id, name, image, reserved, desc,
+}) => {
+  const dispatch = useDispatch();
+
+  const handleReservation = (id) => (
+    dispatch(reserveRocket(id))
+  );
+
   return (
     <div className="rocket">
       <img className="rocket-image" src={image} alt={name} />
@@ -17,23 +24,23 @@ const Rocket = ({id, name, image, reserved, desc}) => {
         <button type="button" className={`${reserved ? 'cancel' : 'reserve'}`} onClick={() => handleReservation(id)}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket' }</button>
       </div>
     </div>
-  )
+  );
 };
 
-Rocket.propTypes = {
-    id: PropTypes.number,
-    name: PropTypes.string,
-    image: PropTypes.string,
-    desc: PropTypes.string,
-    reserved: PropTypes.bool,
-  };
-  
-  Rocket.defaultProps = {
-    reserved: false,
-    id: null,
-    name: null,
-    image: null,
-    desc: null,
-  };
+RocketCard.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  desc: PropTypes.string,
+  reserved: PropTypes.bool,
+};
 
-export default Rocket
+RocketCard.defaultProps = {
+  reserved: false,
+  id: null,
+  name: null,
+  image: null,
+  desc: null,
+};
+
+export default RocketCard;
