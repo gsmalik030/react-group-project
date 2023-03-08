@@ -17,7 +17,7 @@ const MyRocketsProfile = ({
             className={`${reserved ? 'cancel' : 'reserve'}`}
             onClick={() => dispatch(reserveRocket(id))}
           >
-            {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
+            {reserved ? 'Cancel Reservation' : 'Reserve '}
           </button>
           <a href={URL}>Read more</a>
         </li>

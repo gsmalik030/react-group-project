@@ -28,7 +28,7 @@ const MissionProfile = () => {
                   className={`${mission.reserved ? 'cancel' : 'reserve'}`}
                   onClick={() => dispatch(toggleMissionReservation(mission.mission_id))}
                 >
-                  {mission.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
+                  {mission.reserved ? 'Cancel Reservation' : 'Reserve'}
                 </button>
                 <a href={mission.wikipedia}>Read more</a>
               </li>
