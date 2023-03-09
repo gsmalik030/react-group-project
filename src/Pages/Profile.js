@@ -2,7 +2,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import MyRocketsProfile from '../component/rockets-profile';
-import MissionsProfile from '../component/missionsProfile';
+import MissionsProfile from '../component/missionProfile';
 
 const Profile = () => {
   const myRockets = useSelector((state) => state.rockets);
@@ -24,8 +24,7 @@ const Profile = () => {
                   id={rocket.id}
                   URL={rocket.wikipedia}
                 />
-              )) : <p>You don't have any reserved rockets</p>}
-
+              )) : <p>You have no reserved rockets</p>}
             </div>
           </section>
         </div>
