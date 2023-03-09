@@ -63,7 +63,7 @@
 Clone this repository to your desired folder:
 
 ```sh
-  cd math-magicians
+  cd project-directory
   git clone https://github.com/gsmalik030/react-group-project
 ```
 
@@ -72,7 +72,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd math-magicians
+  cd project-directory
   git clone https://github.com/gsmalik030/react-group-project
   npm install
 ```
@@ -82,7 +82,7 @@ Install this project with:
 Use this app by runing:
 
 ```sh
-   cd math-magicians
+   cd project-directory
   git clone https://github.com/gsmalik030/react-group-project
   npm install
   npm start
@@ -93,7 +93,7 @@ Use this app by runing:
 Test this app by runing:
 
 ```sh
-  cd math-magicians
+  cd project-directory
   git clone https://github.com/gsmalik030/react-group-project
   npm install
   npm test
@@ -112,6 +112,11 @@ Test this app by runing:
 - GitHub: [@githubhandle](https://github.com/gsmalik030)
 - Twitter: [@twitterhandle](https://twitter.com/gsmalik030)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghulam-subbhani-4b1281252/)
+
+👤 **Victoria Tumwebaze**
+
+- GitHub: [@githubhandle](https://github.com/Victoria129)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victoria-tumwebaze/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,6 +149,6 @@ I would like to thank to all my Microverse partners.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
