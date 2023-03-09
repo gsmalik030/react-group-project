@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import MyRocketsProfile from '../component/rockets-profile';
@@ -24,6 +25,7 @@ const Profile = () => {
                   URL={rocket.wikipedia}
                 />
               )) : <p>You don't have any reserved rockets</p>}
+
             </div>
           </section>
         </div>
