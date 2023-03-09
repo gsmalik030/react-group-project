@@ -48,7 +48,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://github.com/gsmalik030/react-group-project) [Coming soon]
+- [Live Demo](https://6409e691183a860d2f553cf9--velvety-maamoul-66d0b9.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
