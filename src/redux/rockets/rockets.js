@@ -52,6 +52,7 @@ const
     payload: id,
   });
 
+// eslint-disable-next-line default-param-last
 export default function rocketReducer(state = initialState, action) {
   switch (action.type) {
     case GET_ROCKETS_REQUEST:

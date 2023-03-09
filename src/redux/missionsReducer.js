@@ -23,6 +23,7 @@ export const toggleMissionReservation = (payload) => ({
 
 const initialState = [];
 
+// eslint-disable-next-line default-param-last
 export default (state = initialState, action) => {
   switch (action.type) {
     case `${FETCH_MISSIONS}/fulfilled`:

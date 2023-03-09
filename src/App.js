@@ -5,16 +5,18 @@ import Rockets from './Pages/Rockets';
 import Navbar from './component/Navbar';
 import Profile from './Pages/Profile';
 
-const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Navbar />}>
-        <Route index path='/' element={<Rockets />} />
-        <Route path="/Missions" element={<Missions />} />
-        <Route path="/Profile" element={<Profile />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-);
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index path="/" element={<Rockets />} />
+          <Route path="/Missions" element={<Missions />} />
+          <Route path="/Profile" element={<Profile />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 export default App;

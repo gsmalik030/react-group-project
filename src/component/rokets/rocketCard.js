@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket } from '../../redux/rockets/rockets';
 
-const RocketCard = ({
+function RocketCard({
   id, name, image, reserved, desc,
-}) => {
+}) {
   const dispatch = useDispatch();
 
   const handleReservation = (id) => (
@@ -25,7 +25,7 @@ const RocketCard = ({
       </div>
     </div>
   );
-};
+}
 
 RocketCard.propTypes = {
   id: PropTypes.number,

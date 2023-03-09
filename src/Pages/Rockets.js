@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getRockets } from '../redux/rockets/rockets';
 import RocketCard from '../component/rokets/rocketCard';
 
-const Rockets = () => {
+function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
@@ -31,6 +31,6 @@ const Rockets = () => {
       {cards}
     </div>
   );
-};
+}
 
 export default Rockets;

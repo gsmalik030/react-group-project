@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions, toggleMissionReservation } from '../redux/missionsReducer';
 
-const Missions = () => {
+function Missions() {
   const missionDetails = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
@@ -42,6 +42,6 @@ const Missions = () => {
       </table>
     </main>
   );
-};
+}
 
 export default Missions;

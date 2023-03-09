@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserveRocket } from '../redux/rockets/rockets';
 
-const MyRocketsProfile = ({
+function MyRocketsProfile({
   id, rocketName, reserved, URL,
-}) => {
+}) {
   const dispatch = useDispatch();
   return (
     <div className="my-rockets">
@@ -25,7 +25,7 @@ const MyRocketsProfile = ({
     </div>
 
   );
-};
+}
 
 MyRocketsProfile.propTypes = {
   rocketName: PropTypes.string.isRequired,

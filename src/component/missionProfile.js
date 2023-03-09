@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions, toggleMissionReservation } from '../redux/missionsReducer';
 
-const MissionProfile = () => {
+function MissionProfile() {
   const missions = useSelector((state) => state.missions)
     .filter((mission) => mission.reserved);
 
@@ -36,6 +36,6 @@ const MissionProfile = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MissionProfile;
