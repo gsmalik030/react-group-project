@@ -1,9 +1,8 @@
 /* eslint-disable no-unreachable */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import MyProfile from '../component/profile';
 import MyRocketsProfile from '../component/rockets-profile';
-import MissionProfile from '../component/missionProfile';
+import MissionsProfile from '../component/missionProfile';
 
 const Profile = () => {
   const myRockets = useSelector((state) => state.rockets);
@@ -29,7 +28,7 @@ const Profile = () => {
             </div>
           </section>
         </div>
-        {/* <MissionProfile /> */}
+        <MissionsProfile />
       </div>
     </>
   );
