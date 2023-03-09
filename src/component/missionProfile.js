@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions, toggleMissionReservation } from '../redux/missionsReducer';
 
-const MissionsProfile = () => {
+const MissionProfile = () => {
   const missions = useSelector((state) => state.missions)
     .filter((mission) => mission.reserved);
 
@@ -15,7 +15,7 @@ const MissionsProfile = () => {
     <div className="missions-profile">
       <h2>My Missions</h2>
       <div className="box-border">
-        { missions.length === 0 && <p>You do not have any reserved missions</p>}
+        { missions.length === 0 && <p>You have no reserved missions</p>}
         {missions.map((mission) => (
           <div className="my-missions" key={mission.mission_id}>
             <ul>
@@ -26,7 +26,7 @@ const MissionsProfile = () => {
                   className={`${mission.reserved ? 'cancel' : 'reserve'}`}
                   onClick={() => dispatch(toggleMissionReservation(mission.mission_id))}
                 >
-                  {mission.reserved ? 'Cancel Reservation' : 'Reserve Mission'}
+                  {mission.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
                 </button>
                 <a href={mission.wikipedia}>Read more</a>
               </li>
@@ -38,4 +38,4 @@ const MissionsProfile = () => {
   );
 };
 
-export default MissionsProfile;
+export default MissionProfile;
