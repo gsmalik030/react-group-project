@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions, toggleMissionReservation } from '../redux/missionsReducer';
@@ -28,7 +26,7 @@ const MissionProfile = () => {
                   className={`${mission.reserved ? 'cancel' : 'reserve'}`}
                   onClick={() => dispatch(toggleMissionReservation(mission.mission_id))}
                 >
-                  {mission.reserved ? 'Cancel Reservation' : 'Reserve'}
+                  {mission.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
                 </button>
                 <a href={mission.wikipedia}>Read more</a>
               </li>
