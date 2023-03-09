@@ -24,7 +24,7 @@ const Profile = () => {
                   id={rocket.id}
                   URL={rocket.wikipedia}
                 />
-              )) : <p>You don't have any reserved rockets</p>}
+              )) : <p>You do not have any reserved rockets</p>}
 
             </div>
           </section>
