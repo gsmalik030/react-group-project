@@ -15,7 +15,7 @@ const MissionsProfile = () => {
     <div className="missions-profile">
       <h2>My Missions</h2>
       <div className="box-border">
-        { missions.length === 0 && <p>You don't have any reserved missions</p>}
+        { missions.length === 0 && <p>You do not have any reserved missions</p>}
         {missions.map((mission) => (
           <div className="my-missions" key={mission.mission_id}>
             <ul>
