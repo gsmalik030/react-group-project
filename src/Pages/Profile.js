@@ -1,7 +1,6 @@
 /* eslint-disable no-unreachable */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import MyProfile from '../component/profile';
 import MyRocketsProfile from '../component/rockets-profile';
 import MissionsProfile from '../component/missionProfile';
 
