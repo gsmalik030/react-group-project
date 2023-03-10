@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link as Navlink } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 function Navbar() {
@@ -11,16 +11,16 @@ function Navbar() {
         </div>
         <ul>
           <li>
-            <Link to="/">Rockets</Link>
+            <Navlink to="/">Rockets</Navlink>
           </li>
           <li>
-            <Link to="/Missions">Missions</Link>
+            <Navlink to="/Missions">Missions</Navlink>
           </li>
           <li>
             <span>|</span>
           </li>
           <li>
-            <Link to="/Profile">My Profile</Link>
+            <Navlink to="/Profile">My Profile</Navlink>
           </li>
         </ul>
       </nav>
